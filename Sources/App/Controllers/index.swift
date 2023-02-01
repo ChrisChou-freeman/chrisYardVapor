@@ -1,25 +1,22 @@
 import Vapor
 import Plot
 
+let imageSize = 122
+
 func mainPage(req: Request) async -> Response {
-    
     let html = HTML(
         .head(
             .title("Chris yard"),
-            .link(.rel(.stylesheet), .href("/styles/pico.min.css"))
+            .link(.rel(.stylesheet), .href("/styles/pico.min.css")),
+            .favicon("/favicon.ico")
         ),
         .body(
-            .h2("Countries and their capitals"),
-            .table(
-                .tr(.th("Country"), .th("Capital")),
-                .tr(.td("Sweden"), .td("Stockholm")),
-                .tr(.td("Japan"), .td("Tokyo"))
-            ),
-            .h2("List of ", .strong("programming languages")),
-            .ul(
-                .li("Swift"),
-                .li("Objective-C"),
-                .li("C")
+            .main(
+                .class("container"),
+                .component(ProfileImage()),
+                .component(ProfileTitle()),
+                .component(ProfileSubTitle()),
+                .component(ProductList())
             )
         )
     )

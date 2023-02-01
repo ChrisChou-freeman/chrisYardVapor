@@ -11,7 +11,7 @@ import Plot
 extension HTML {
     var htmlResponse: Response {
         var header = HTTPHeaders()
-        header.add(name: .contentType, value: "text/html")
+        header.add(name: .contentType, value: "text/html; charset=utf-8")
         let response = Response(
             status: .ok,
             body: .init(string: self.render())
