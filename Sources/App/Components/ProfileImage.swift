@@ -8,7 +8,7 @@
 import Plot
 
 struct ProfileImage: Component {
-    let imageSize = 122
+    let imageSize = 125
 
     var body: Component {
         Div(

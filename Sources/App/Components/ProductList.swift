@@ -13,7 +13,6 @@ let buttonList: [String] = [
 ]
 
 struct ProductList: Component {
-//    let width = 320
 
     var body: Component {
         Node.forEach(buttonList) { button in
@@ -21,8 +20,7 @@ struct ProductList: Component {
                 .style(centerStyle),
                 .button(
                     .style("""
-                        width: 30%;
-                        font-size: 15px;
+                        width: 60%;
                         font-weight: bold;
                     """
                     ),
