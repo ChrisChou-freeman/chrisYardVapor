@@ -10,5 +10,5 @@ import Foundation
 func myAge(bornYear: Int) -> Int {
     let date = Date()
     let dateComp = Calendar.current.dateComponents([.year], from: date)
-    return dateComp.year ?? 2000
+    return (dateComp.year ?? 2023) - bornYear
 }
