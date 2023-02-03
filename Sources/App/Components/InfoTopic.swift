@@ -46,6 +46,8 @@ let infoTopicLists: [InfoTopicList] = [
 ]
 
 struct InfoTopic: Component {
+    let spaceToTop = 230
+
     var body: Component {
         Node.div(
             .forEach(infoTopicLists, { topic in
@@ -62,11 +64,11 @@ struct InfoTopic: Component {
                 )
             })
         )
-        .class("grid")
         .style("""
-            \(centerStyle)
+            display: flex;
             justify-content: space-evenly;
-            margin-top: 300px;
+            justify-items: center;
+            margin-top: \(spaceToTop)px;
         """)
     }
 }
