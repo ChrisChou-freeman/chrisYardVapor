@@ -9,5 +9,5 @@ let centerStyle = """
 display: flex;
 justify-content: center;
 flex-direction: row;
-align-items: center;
+align-items: top;
 """

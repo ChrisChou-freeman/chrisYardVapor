@@ -16,7 +16,8 @@ func mainPage(req: Request) async -> Response {
                 .component(ProfileImage()),
                 .component(ProfileTitle()),
                 .component(ProfileSubTitle()),
-                .component(ProductList())
+                .component(ProductList()),
+                .component(InfoTopic())
             )
         )
     )
