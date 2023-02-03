@@ -11,8 +11,8 @@ struct ProfileImage: Component {
     let imageSize = 125
 
     var body: Component {
-        Div(
-            Node.div(
+        Node.div(
+            .div(
                 .style(
                     """
                     background-image: url('/images/profile.jpg');
