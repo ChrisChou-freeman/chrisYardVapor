@@ -24,7 +24,7 @@ let infoTopicLists: [InfoTopicList] = [
         name: "About Me",
         subList: [
             .init(name: "male, \(myAge(bornYear: 1995))", icon: "👨", link: "", isLink: false),
-            .init(name: "from China GanZhou", icon: "🇨🇳", link: "", isLink: false),
+            .init(name: "from China, GanZhou", icon: "🇨🇳", link: "", isLink: false),
             .init(name: "freelancer(nearly homeless)", icon: "😿", link: "", isLink: false),
             .init(name: "full stack developer", icon: "👨‍💻", link: "", isLink: false)
         ]
@@ -58,7 +58,10 @@ struct InfoTopic: Component {
                     ),
                     .section(
                         .forEach(topic.subList, { subTitle in
-                            .div("\(subTitle.icon)\(subTitle.name)")
+                            .div(
+                                .style("margin-bottom: 10px;"),
+                                "\(subTitle.icon)\(subTitle.name)"
+                            )
                         })
                     )
                 )
