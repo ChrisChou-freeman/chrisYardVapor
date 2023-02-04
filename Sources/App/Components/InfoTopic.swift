@@ -32,7 +32,7 @@ let infoTopicLists: [InfoTopicList] = [
     .init(
         name: "Find Me",
         subList: [
-            .init(name: "Email", icon: "📮", link: "mailto:ChrisChouFreeMan@hotmail.com", isLink: true),
+            .init(name: "Email", icon: "📮", link: "mailto:bornbefreesolo@hotmail.com", isLink: true),
             .init(name: "Twitter", icon: "🐦", link: "https://twitter.com/ChrisWantBeFree", isLink: true),
         ]
     ),
@@ -58,10 +58,7 @@ struct InfoTopic: Component {
                     ),
                     .section(
                         .forEach(topic.subList, { subTitle in
-                            .div(
-                                .style("margin-bottom: 10px;"),
-                                "\(subTitle.icon)\(subTitle.name)"
-                            )
+                            .component(InfoLink(iconNameLink: subTitle))
                         })
                     )
                 )
@@ -73,5 +70,32 @@ struct InfoTopic: Component {
             justify-items: center;
             margin-top: \(spaceToTop)px;
         """)
+    }
+}
+
+struct InfoLink: Component {
+    let iconNameLink: IconNameLink
+
+    var body: Component {
+        if iconNameLink.isLink {
+            return linkItem
+        } else {
+            return noneLinkItem
+        }
+    }
+
+    var linkItem: Component {
+        Node.a(
+            .style("margin-bottom: 10px;display:block;"),
+            "\(iconNameLink.icon)\(iconNameLink.name)",
+            .href(iconNameLink.link)
+        )
+    }
+
+    var noneLinkItem: Component {
+        Node.div(
+            .style("margin-bottom: 10px;"),
+            "\(iconNameLink.icon)\(iconNameLink.name)"
+        )
     }
 }
