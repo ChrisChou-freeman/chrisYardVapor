@@ -25,12 +25,13 @@ let infoTopicLists: [InfoTopicList] = [
         subList: [
             .init(name: "male, \(myAge(bornYear: 1995))", icon: "👨", link: "", isLink: false),
             .init(name: "from China, GanZhou", icon: "🇨🇳", link: "", isLink: false),
-            .init(name: "freelancer(nearly homeless)", icon: "😿", link: "", isLink: false),
-            .init(name: "full stack developer", icon: "👨‍💻", link: "", isLink: false)
+            .init(name: "full stack developer", icon: "👨‍💻", link: "", isLink: false),
+            .init(name: "freelancer", icon: "👐", link: "", isLink: false),
+            .init(name: "nearly homeless", icon: "🥹", link: "", isLink: false)
         ]
     ),
     .init(
-        name: "Find Me",
+        name: "Contact Me",
         subList: [
             .init(name: "Email", icon: "📮", link: "mailto:bornbefreesolo@hotmail.com", isLink: true),
             .init(name: "Twitter", icon: "🐦", link: "https://twitter.com/ChrisWantBeFree", isLink: true),
