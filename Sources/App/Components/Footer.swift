@@ -13,6 +13,7 @@ struct Footer: Component {
             .class("container-fluid"),
             .style("""
                 padding: 1rem 0;
+                \(centerStyle)
             """),
             .small(
                 "©️2023 Chris Chou. All Rights Reserved. • ",
