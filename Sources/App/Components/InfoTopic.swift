@@ -47,14 +47,14 @@ let infoTopicLists: [InfoTopicList] = [
 ]
 
 struct InfoTopic: Component {
-    let spaceToTop = 230
+    let spaceToTop = 220
 
     var body: Component {
         Node.div(
             .forEach(infoTopicLists, { topic in
                 .div(
-                    .h2(
-                        .style("margin-bottom: 30px;"),
+                    .h3(
+                        .style("margin-bottom: 25px;"),
                         "\(topic.name)"
                     ),
                     .section(

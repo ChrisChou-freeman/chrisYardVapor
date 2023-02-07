@@ -12,13 +12,15 @@ func mainPage(req: Request) async -> Response {
         ),
         .body(
             .main(
+                .style("min-height: calc(100vh - 3rem);"),
                 .class("container"),
                 .component(ProfileImage()),
                 .component(ProfileTitle()),
                 .component(ProfileSubTitle()),
                 .component(ProductList()),
                 .component(InfoTopic())
-            )
+            ),
+            .component(Footer())
         )
     )
     return html.htmlResponse
