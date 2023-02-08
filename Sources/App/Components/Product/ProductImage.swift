@@ -10,8 +10,10 @@ import Plot
 struct ProductImage: Component {
     var body: Component {
         Node.div(
-            .img(.src("/images/pmboard/main.png")),
-            .style(centerStyle)
+            .picture(
+                .source(.srcset("/images/pmboard/main-dark.png"), .media("(prefers-color-scheme: dark)")),
+                .img(.src("images/pmboard/main.png"))
+            )
         )
     }
 }

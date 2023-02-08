@@ -12,7 +12,10 @@ struct ProductDownload: Component {
 
     var body: Component {
         Node.a(
-            .img(.src("/images/download-icon.svg")),
+            .picture(
+                .source(.srcset("/images/download-icon-dark.svg"), .media("(prefers-color-scheme: dark)")),
+                .img(.src("/images/download-icon.svg"))
+            ),
             .href("https://apps.apple.com/app/pmboard-tasks-manger-todo/id1661513330"),
             .target(.blank),
             .style("""

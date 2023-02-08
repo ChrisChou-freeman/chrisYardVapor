@@ -10,15 +10,15 @@ import Plot
 
 func pmboard(req: Request) async -> Response {
     let html = HTML(
-        .attribute(named: "data-theme", value: "light"),
-        .style("""
-            background-color: #f2f2f2;
-        """),
+//        .attribute(named: "data-theme", value: "light"),
+//        .style("""
+//            background-color: #f2f2f2;
+//        """),
         .head(
             .title("PMBoard"),
             .link(.rel(.stylesheet), .href("/styles/pico.min.css")),
-            .favicon("/favicon-pmboard.ico"),
-            .meta(.name("theme-color"), .content("#222222"))
+            .favicon("/favicon-pmboard.ico")
+//            .meta(.name("theme-color"), .content("#222222"))
         ),
         .body(
             .component(ProductNav()),
