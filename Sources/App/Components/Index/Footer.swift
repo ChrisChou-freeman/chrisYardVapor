@@ -16,7 +16,7 @@ struct Footer: Component {
                 \(centerStyle)
             """),
             .small(
-                "©️2023 Chris Chou. All Rights Reserved. • ",
+                "©️\(thisYearNumber()) Chris Chou. All Rights Reserved. • ",
                 .a(
                     .class("secondary"),
                     .href("https://github.com/ChrisChou-freeman/chrisYardVapor"),

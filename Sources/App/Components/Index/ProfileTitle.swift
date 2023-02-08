@@ -9,8 +9,8 @@ import Plot
 
 struct ProfileTitle: Component {
     var body: Component {
-        Div(
-            Node.h2(
+        Node.div(
+            .h2(
                 .style("margin-bottom: 0;"),
                 "Chris"
             )
@@ -21,8 +21,8 @@ struct ProfileTitle: Component {
 
 struct ProfileSubTitle: Component {
     var body: Component {
-        Div(
-            Node.h6(
+        Node.div(
+            .h6(
                 .style("margin-bottom: 15px;"),
                 "👋 Welcome to my yard!"
             )

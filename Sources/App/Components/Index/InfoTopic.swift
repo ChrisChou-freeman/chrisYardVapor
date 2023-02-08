@@ -41,7 +41,8 @@ let infoTopicLists: [InfoTopicList] = [
         name: "Other",
         subList: [
             .init(name: "Github", icon: "👾", link: "https://github.com/ChrisChou-freeman", isLink: true),
-            .init(name: "Product Hunt", icon: "🛒", link: "https://www.producthunt.com/@chrischoufreeman", isLink: true)
+            .init(name: "Product Hunt", icon: "🛒", link: "https://www.producthunt.com/@chrischoufreeman", isLink: true),
+            .init(name: "Blog", icon: "📒", link: "https://medium.com/@ChrisChouFreeMan", isLink: true)
         ]
     )
 ]

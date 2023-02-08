@@ -9,18 +9,20 @@ import Plot
 
 let buttonList: [ButtonStruct] = [
     .init(
-        content: "🎧 Pomodoro and Sounds(macOS app)",
-        link: "https://apps.apple.com/app/deepfocus-pomodoro-sounds/id1628457656?l=en"
+        content: "✅ Task Manger(macOS app)",
+        link: "/pmboard"
     ),
     .init(
-        content: "✅ Task Manger(macOS app)",
-        link: "https://apps.apple.com/app/pmboard-tasks-manger-todo/id1661513330?l=en&mt=12"
+        content: "🎧 Pomodoro and Sounds(macOS app)",
+        link: "https://apps.apple.com/app/deepfocus-pomodoro-sounds/id1628457656?l=en",
+        newTable: true
     )
 ]
 
 struct ButtonStruct {
     let content: String
     let link: String
+    var newTable: Bool = false
 }
 
 struct ProductList: Component {
@@ -38,6 +40,7 @@ struct ProductList: Component {
                     ),
                     .class("secondary"),
                     .href(button.link),
+                    .target(button.newTable ? .blank : .parent),
                     "\(button.content)"
                 )
             )
