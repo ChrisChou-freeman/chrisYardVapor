@@ -26,8 +26,14 @@ struct ProductFooter: Component {
                 .a(
                     .style("text-decoration: none;"),
                     .class("secondary"),
-                    .href("/"),
-                    "Privacy"
+                    .href("https://github.com/ChrisChou-freeman/PMBoardSupport"),
+                    "Privacy • "
+                ),
+                .a(
+                    .style("text-decoration: none;"),
+                    .class("secondary"),
+                    .href("https://github.com/ChrisChou-freeman/PMBoardSupport/issues"),
+                    "Github Issue"
                 )
             )
         )

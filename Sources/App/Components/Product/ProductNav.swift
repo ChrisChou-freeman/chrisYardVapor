@@ -19,6 +19,9 @@ struct ProductNav: Component {
                 )
             ),
             .ul(
+//                .li(
+//                    .a(.small("Pricing"), .href("#"), .class("secondary"))
+//                ),
                 .li(
                     .a(.small("Developer"), .href("/"), .class("secondary"))
                 )
