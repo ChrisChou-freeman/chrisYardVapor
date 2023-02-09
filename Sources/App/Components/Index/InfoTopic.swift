@@ -90,7 +90,8 @@ struct InfoLink: Component {
         Node.a(
             .style("margin-bottom: 10px;display:block;"),
             "\(iconNameLink.icon)\(iconNameLink.name)",
-            .href(iconNameLink.link)
+            .href(iconNameLink.link),
+            .target(.blank)
         )
     }
 

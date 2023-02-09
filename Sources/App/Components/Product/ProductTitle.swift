@@ -12,7 +12,7 @@ struct ProductTitle: Component {
         Node.div(
             .h2(
                 .style("margin-bottom: 0;"),
-                "Organizing your Tasks&ToDo List made clear"
+                "Organizing your tasks&ToDo list get the job done easy"
             )
         )
         .style(centerStyle)
