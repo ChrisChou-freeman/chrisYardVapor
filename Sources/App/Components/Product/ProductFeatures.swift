@@ -27,7 +27,7 @@ let features: [FeatureStruct] = [
     ),
     .init(
         title: "Sync to calendar",
-        content: "Sync your task to calendar. include note, reminder time, calendar event color",
+        content: "Sync your task to calendar. include note, reminder time, calendar recurring event",
         imagePath: "/images/pmboard/feature3.png"
     ),
     .init(
