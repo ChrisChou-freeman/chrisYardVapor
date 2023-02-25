@@ -1,5 +1,5 @@
 //
-//  pmboard.swift
+//  product.swift
 //  
 //
 //  Created by ChrisChou on 2023/2/8.
@@ -8,10 +8,15 @@
 import Vapor
 import Plot
 
-func pmboard(req: Request) async -> Response {
+func product(req: Request) async -> Response {
     let html = HTML(
         .head(
             .title("PMBoard"),
+            .meta(.name("description"), .content("PMBoard macOS app website")),
+            .meta(
+                .name("keywords"),
+                .content("Project manager, Task manager, To-do list, To do list, task list")
+            ),
             .link(.rel(.stylesheet), .href("/styles/pico.min.css")),
             .favicon("/favicon-pmboard.ico"),
             .style("""

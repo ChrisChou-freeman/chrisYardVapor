@@ -6,6 +6,6 @@ func routes(_ app: Application) throws {
     }
 
     app.get("pmboard") { req async in
-        await pmboard(req: req)
+        await product(req: req)
     }
 }
