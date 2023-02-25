@@ -7,6 +7,11 @@ func mainPage(req: Request) async -> Response {
     let html = HTML(
         .head(
             .title("Chris yard"),
+            .meta(.name("description"), .content("Chris's personal home page")),
+            .meta(
+                .name("keywords"),
+                .content("ChrisChou,indie developer")
+            ),
             .link(.rel(.stylesheet), .href("/styles/pico.min.css")),
             .favicon("/favicon.ico")
         ),
