@@ -1,14 +1,7 @@
-//
-//  product.swift
-//  
-//
-//  Created by ChrisChou on 2023/2/8.
-//
-
 import Vapor
 import Plot
 
-func product(req: Request) async -> Response {
+func productPrivacy(req: Request) async -> Response {
     let html = HTML(
         .component(ProductHead()),
         .body(
@@ -18,11 +11,7 @@ func product(req: Request) async -> Response {
                     min-height: calc(100vh - 8rem);
                 """),
                 .class("container"),
-                .component(ProductTitle()),
-                .component(ProductSubTitle()),
-                .component(ProductDownload()),
-                .component(ProductImage()),
-                .component(ProductFeatures())
+                .component(ProductPrivacy(privacyName: "pmboard_privacy"))
             ),
             .component(ProductFooter())
         )

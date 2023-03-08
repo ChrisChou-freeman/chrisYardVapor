@@ -26,7 +26,7 @@ struct ProductFooter: Component {
                 .a(
                     .style("text-decoration: none;"),
                     .class("secondary"),
-                    .href("https://github.com/ChrisChou-freeman/PMBoardSupport"),
+                    .href("/pmboard/privacy"),
                     "Privacy • "
                 ),
                 .a(

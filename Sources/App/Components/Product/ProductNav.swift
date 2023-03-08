@@ -14,8 +14,16 @@ struct ProductNav: Component {
                 padding: 0 1rem;
             """),
             .ul(
-                .li(.img(.src("/favicon-pmboard.ico")),
-                    .a(.strong("PMBoard"), .href("/pmboard"), .class("secondary"))
+                .li(
+                    .img(.src("/favicon-pmboard.ico")),
+                    .a(
+                        .strong("PMBoard"),
+                        .href("/pmboard"),
+                        .class("secondary"),
+                        .style("""
+                            padding-left: 20px;
+                        """)
+                    )
                 )
             ),
             .ul(

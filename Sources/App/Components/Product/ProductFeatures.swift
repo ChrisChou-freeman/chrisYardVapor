@@ -27,7 +27,7 @@ let features: [FeatureStruct] = [
     ),
     .init(
         title: "Sync to calendar",
-        content: "Sync your task to calendar. include note, reminder time, calendar recurring event",
+        content: "Sync your task to calendar. include note, url, reminder time, calendar recurring event",
         imagePath: "/images/pmboard/feature3.png"
     ),
     .init(
@@ -50,18 +50,20 @@ let features: [FeatureStruct] = [
 struct ProductFeatures: Component {
     var body: Component {
         Node.div(
-            .style("""
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-            """),
-            .forEach(features, { feature in
-                .div(
-                    .style("margin-bottom: 20px;margin-right: 30px;"),
-                    .img(.src(feature.imagePath), .class("round-img")),
-                    .h6("\(feature.title)"),
-                    .p("\(feature.content)")
-                )
-            })
+            .div(
+                .style("""
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                """),
+                .forEach(features, { feature in
+                    .div(
+                        .style("margin-bottom: 20px;margin-right: 30px;"),
+                        .img(.src(feature.imagePath), .class("round-img")),
+                        .h6("\(feature.title)"),
+                        .p("\(feature.content)")
+                    )
+                })
+            )
         )
     }
 }
