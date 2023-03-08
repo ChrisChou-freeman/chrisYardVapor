@@ -21,7 +21,7 @@ let package = Package(
                 .product(name: "Ink", package: "ink")
             ],
             resources: [
-                .copy("Resources")
+                .copy("Resources/pmboard_privacy.md")
             ],
             swiftSettings: [
                 .unsafeFlags(["-cross-module-optimization"], .when(configuration: .release))

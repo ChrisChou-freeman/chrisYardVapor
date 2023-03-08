@@ -10,10 +10,10 @@ struct ProductPrivacy: Component {
     }
 
     var getMarkDownText: String {
-        guard let filetUrl = Bundle.module.url(forResource: privacyName, withExtension: "md", subdirectory: "Resources") else {
+        guard let fileUrl = Bundle.module.url(forResource: privacyName, withExtension: "md") else {
             return ""
         }
-        if let data = try? Data(contentsOf: filetUrl) {
+        if let data = try? Data(contentsOf: fileUrl) {
             let mdString = String(decoding: data, as: UTF8.self)
             let parser = MarkdownParser()
             return parser.html(from: mdString)
