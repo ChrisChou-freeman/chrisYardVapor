@@ -6,8 +6,11 @@
 //
 
 import Plot
+import Vapor
 
 struct ProductFooter: Component {
+    let req: Request
+    
     var body: Component {
         Node.footer(
             .class("container"),
@@ -19,23 +22,25 @@ struct ProductFooter: Component {
                 "©️\(thisYearNumber()) PMBoard • ",
                 .a(
                     .style("text-decoration: none;"),
-                    .class("secondary"),
                     .href("/"),
                     "Contact • "
                 ),
                 .a(
                     .style("text-decoration: none;"),
-                    .class("secondary"),
                     .href("/pmboard/privacy"),
+                    .class(isPrivacyPath ? "secondary" : ""),
                     "Privacy • "
                 ),
                 .a(
                     .style("text-decoration: none;"),
-                    .class("secondary"),
                     .href("https://github.com/ChrisChou-freeman/PMBoardSupport/issues"),
                     "Github Issue"
                 )
             )
         )
+    }
+
+    var isPrivacyPath: Bool {
+        req.url.path == "/pmboard/privacy"
     }
 }

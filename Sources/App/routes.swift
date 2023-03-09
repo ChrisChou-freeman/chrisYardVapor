@@ -9,6 +9,10 @@ func routes(_ app: Application) throws {
         await product(req: req)
     }
 
+    app.get("pmboard", "pricing") { req async in
+        await productPricing(req: req)
+    }
+
     app.get("pmboard", "privacy") { req async in
         await productPrivacy(req: req)
     }

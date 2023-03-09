@@ -12,19 +12,19 @@ func product(req: Request) async -> Response {
     let html = HTML(
         .component(ProductHead()),
         .body(
-            .component(ProductNav()),
+            .component(ProductNav(req: req)),
             .main(
                 .style("""
                     min-height: calc(100vh - 8rem);
                 """),
                 .class("container"),
-                .component(ProductTitle()),
-                .component(ProductSubTitle()),
+                .component(ProductTitle(information: "Organizing your tasks&ToDo list get the job done easily")),
+                .component(ProductSubTitle(information: "Native technology, faster, smaller, less memory, iCloud sync support")),
                 .component(ProductDownload()),
                 .component(ProductImage()),
                 .component(ProductFeatures())
             ),
-            .component(ProductFooter())
+            .component(ProductFooter(req: req))
         )
     )
     return html.htmlResponse

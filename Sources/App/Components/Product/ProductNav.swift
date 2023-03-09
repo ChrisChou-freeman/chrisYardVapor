@@ -6,8 +6,11 @@
 //
 
 import Plot
+import Vapor
 
 struct ProductNav: Component {
+    let req: Request
+
     var body: Component {
         Node.nav(
             .style("""
@@ -27,13 +30,17 @@ struct ProductNav: Component {
                 )
             ),
             .ul(
-//                .li(
-//                    .a(.small("Pricing"), .href("#"), .class("secondary"))
-//                ),
                 .li(
-                    .a(.small("Developer"), .href("/"), .class("secondary"))
+                    .a(.small("Pricing"), .href("/pmboard/pricing"), .class(isPricingPath ? "secondary" : ""))
+                ),
+                .li(
+                    .a(.small("Developer"), .href("/"), .class(""))
                 )
             )
         )
+    }
+
+    var isPricingPath: Bool {
+        req.url.path == "/pmboard/pricing"
     }
 }

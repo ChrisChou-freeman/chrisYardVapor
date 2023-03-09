@@ -5,7 +5,7 @@ func productPrivacy(req: Request) async -> Response {
     let html = HTML(
         .component(ProductHead()),
         .body(
-            .component(ProductNav()),
+            .component(ProductNav(req: req)),
             .main(
                 .style("""
                     min-height: calc(100vh - 8rem);
@@ -13,7 +13,7 @@ func productPrivacy(req: Request) async -> Response {
                 .class("container"),
                 .component(ProductPrivacy(privacyName: "pmboard_privacy"))
             ),
-            .component(ProductFooter())
+            .component(ProductFooter(req: req))
         )
     )
     return html.htmlResponse

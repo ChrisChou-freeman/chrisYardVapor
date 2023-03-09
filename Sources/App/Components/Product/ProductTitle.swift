@@ -8,11 +8,13 @@
 import Plot
 
 struct ProductTitle: Component {
+    let information: String
+
     var body: Component {
         Node.div(
             .h2(
                 .style("margin-bottom: 0;"),
-                "Organizing your tasks&ToDo list get the job done easily"
+                "\(information)"
             )
         )
         .style(centerStyle)
@@ -20,11 +22,13 @@ struct ProductTitle: Component {
 }
 
 struct ProductSubTitle: Component {
+    let information: String
+    
     var body: Component {
         Node.div(
             .h6(
                 .style("margin-bottom: 15px;"),
-                "Native technology, faster, smaller, less memory, iCloud sync support",
+                "\(information)",
                 .class("Secondart")
             )
         )
