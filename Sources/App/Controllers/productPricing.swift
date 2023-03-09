@@ -19,14 +19,14 @@ func productPricing(req: Request) async -> Response  {
                     min-height: calc(100vh - 8rem);
                 """),
                 .class("container"),
-                .component(ProductTitle(information: "At the cost of a Coca per month")),
+                .component(ProductTitle(information: "At the cost of a can of soda per month")),
                 .component(ProductSubTitle(information: "Increase your productivity with organized tasks.")),
                 .component(ProductPricingBox(pricingList: [
                     .init(
                         title: "Basic",
                         priceInfo: "Free",
                         linkString: "Get start",
-                        link: "",
+                        link: "https://apps.apple.com/app/pmboard-tasks-manger-todo/id1661513330",
                         features: [
                             "* Creat 2 projects",
                             "* All basic task manage function",
@@ -38,7 +38,7 @@ func productPricing(req: Request) async -> Response  {
                         title: "Upgrade",
                         priceInfo: "0.99$ / month",
                         linkString: "try free for 7 days",
-                        link: "",
+                        link: "https://apps.apple.com/app/pmboard-tasks-manger-todo/id1661513330",
                         features: [
                             "* No limit to create projects",
                             "* organize task with folders",
