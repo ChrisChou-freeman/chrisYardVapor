@@ -37,7 +37,7 @@ func productPricing(req: Request) async -> Response  {
                     .init(
                         title: "Upgrade",
                         priceInfo: "0.99$ / month",
-                        linkString: "try free for 7 days",
+                        linkString: "Frist 7 days free",
                         link: "https://apps.apple.com/app/pmboard-tasks-manger-todo/id1661513330",
                         features: [
                             "* No limit to create projects",
