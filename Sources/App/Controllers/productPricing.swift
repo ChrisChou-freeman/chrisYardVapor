@@ -9,7 +9,6 @@ import Plot
 import Vapor
 
 func productPricing(req: Request) async -> Response  {
-    print(req.url.path)
     let html = HTML(
         .component(ProductHead()),
         .body(

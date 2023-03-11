@@ -28,12 +28,12 @@ struct ProductPricingBox: Component {
             .forEach(pricingList, { pricingInfo in
                 .div(
                     .style("""
-                        border-radius: 20px;
-                        border: 1px solid black;
+                        border-radius: 10px;
+                        border: 1px solid rgb(157, 140, 140);
                         padding: 20px;
                         margin-right: 30px;
                         margin-top: 30px;
-                        box-shadow: 3px 3px 2px;
+                        box-shadow: 2px 2px 2px;
                     """),
                     .h6("\(pricingInfo.title)"),
                     .h3("\(pricingInfo.priceInfo)"),
@@ -41,6 +41,7 @@ struct ProductPricingBox: Component {
                         "\(pricingInfo.linkString)",
                         .attribute(named: "role", value: "button"),
                         .href(pricingInfo.link),
+                        .class("secondary"),
                         .style("""
                             margin-bottom: 30px;
                         """)
