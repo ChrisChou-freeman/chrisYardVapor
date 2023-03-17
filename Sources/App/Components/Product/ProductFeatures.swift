@@ -21,19 +21,9 @@ let features: [FeatureStruct] = [
         imagePath: "/images/pmboard/feature1.png"
     ),
     .init(
-        title: "Background change",
-        content: "Contains a variety of background images, which can be change at any time",
-        imagePath: "/images/pmboard/feature2.png"
-    ),
-    .init(
         title: "Sync to calendar",
         content: "Sync your task to calendar. include note, url, reminder time, calendar recurring event",
         imagePath: "/images/pmboard/feature3.png"
-    ),
-    .init(
-        title: "Organizing with folder",
-        content: "Organized, make your project clear, and find quickly",
-        imagePath: "/images/pmboard/feature4.png"
     ),
     .init(
         title: "Record your ideas anytime",
