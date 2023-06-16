@@ -9,14 +9,18 @@ import Plot
 
 let buttonList: [ButtonStruct] = [
     .init(
-        content: "✅ Task Manger(macOS app)",
-        link: "/pmboard"
-    ),
-    .init(
         content: "🎧 Pomodoro and Sounds(macOS app)",
         link: "https://apps.apple.com/app/deepfocus-pomodoro-sounds/id1628457656?l=en",
         newTable: true
-    )
+    ),
+    .init(
+        content: "📒 New note app(working on it)",
+        link: "/"
+    ),
+    .init(
+        content: "✅ Task Manger(removed from app store)",
+        link: "/"
+    ),
 ]
 
 struct ButtonStruct {
