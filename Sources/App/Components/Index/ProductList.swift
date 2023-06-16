@@ -11,15 +11,18 @@ let buttonList: [ButtonStruct] = [
     .init(
         content: "🎧 Pomodoro and Sounds(macOS app)",
         link: "https://apps.apple.com/app/deepfocus-pomodoro-sounds/id1628457656?l=en",
-        newTable: true
+        newTable: true,
+        disable: false
     ),
     .init(
         content: "📒 New note app(working on it)",
-        link: "/"
+        link: "/",
+        disable: false
     ),
     .init(
         content: "✅ Task Manger(removed from app store)",
-        link: "/"
+        link: "/",
+        disable: true
     ),
 ]
 
@@ -27,6 +30,7 @@ struct ButtonStruct {
     let content: String
     let link: String
     var newTable: Bool = false
+    let disable: Bool
 }
 
 struct ProductList: Component {
@@ -40,6 +44,7 @@ struct ProductList: Component {
                         width: 60%;
                         font-weight: bold;
                         margin-bottom: 15px;
+                        \(button.disable ? "text-decoration: line-through" : "")
                     """
                     ),
                     .class("secondary"),
